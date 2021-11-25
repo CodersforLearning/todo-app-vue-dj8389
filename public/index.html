@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+
+  <!-- Import Styles -->
+  <link rel="stylesheet" href="../src/assets/styles.css">
+
+  <!-- Import Vue.js -->
+  <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app">
+    <h1>To Do App</h1>
+    <task-form @task-added="addTask"></task-form>
+
+    <h2>Current Tasks</h2>
+    <task-list :tasks="tasks"></task-list>
+    
+    
+
+  </div>
+  <!-- built files will be auto injected -->
+
+  <!-- Import App -->
+  <script src="../src/main.js"></script>
+
+  <!-- Import Components -->
+  <script src="../src/components/TaskForm.js"></script>
+  <script src="../src/components/TaskList.js"></script>
+
+  <!-- Mount App -->
+  <script>
+    const mountedApp = app.mount('#app')
+  </script>
+</body>
+
 </html>
