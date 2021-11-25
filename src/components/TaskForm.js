@@ -6,15 +6,21 @@ app.component('task-form', {
         `
         <form class="task-form" @submit.prevent="onAdd">
         <label for="name">Name:</label>
+        <br>
         <input id="name" v-model="name">
+        <br>
 
         <label for="description">Description:</label>
+        <br>
         <textarea id="description" v-model="description"></textarea>
-        
-        <label for="endDate">End Date:</label>
-        <input type="date" id="endDate" v-model="endDate">
+        <br>
 
-        <!-- this should call method -->
+        <label for="endDate">End Date: </label>
+        <br>
+        <input type="date" id="endDate" v-model="endDate">
+        <br>
+        <br>
+
         <input class="button" type="submit" value="Add Task"> 
 
         </form>

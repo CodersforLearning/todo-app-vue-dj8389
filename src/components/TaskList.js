@@ -20,7 +20,9 @@ app.component('task-list', {
                 <td id="name-header">{{task.name}}</td>
                 <td id="description-header">{{task.description}}</td>
                 <td id="endDate-header">{{task.endDate}}</td>
-                <td>{{task.complete}}</td>
+                <td>
+                    <input type="checkbox">
+                </td>
             </tr>
         </table>
         </div>
