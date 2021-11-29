@@ -1,6 +1,6 @@
 <template>
-  <div class="task-list">
-    <table>
+  <div class="container">
+    <table class="table table-striped table-bordered table-hover table-condensed">
       <tr>
         <th id="name-header">Name</th>
         <th id="description-header">Description</th>
@@ -28,4 +28,6 @@ export default {
 </script>
 
 <style>
+
+
 </style>

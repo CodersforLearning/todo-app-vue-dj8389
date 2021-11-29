@@ -13,7 +13,8 @@
     <input type="date" id="endDate" v-model="endDate" />
     <br />
     <br />
-    <input class="button" type="submit" value="Add Task" />
+    <input class="btn btn-primary justify-content-center m-1
+" type="submit" value="Add Task" />
   </form>
 </template>
 

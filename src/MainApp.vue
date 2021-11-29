@@ -1,6 +1,8 @@
 <template>
-    <h1>To Do App</h1>
-    <TaskForm @task-added="addTask"></TaskForm>
+    <h1 class="container">To Do App</h1>
+    <TaskForm class="container" @task-added="addTask"></TaskForm>
+    <br>
+    <br>
     <TaskList :tasks="tasks"></TaskList>
 
 </template>
