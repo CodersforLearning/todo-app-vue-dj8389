@@ -3,7 +3,7 @@
     <TaskForm class="container" @task-added="addTask"></TaskForm>
     <br>
     <br>
-    <TaskList :tasks="tasks"></TaskList>
+    <TaskList :tasks="tasks" @task-deleted="deleteTask" @update-task="updateSelectedTask"></TaskList>
 
 </template>
 
@@ -32,13 +32,20 @@ export default {
                 endDate: '..',
                 complete: false
 
-            }]
+            }],
+            selectedTask: null,
         }
     },
     methods: {
-         addTask(task) {
+        addTask(task) {
             this.tasks.push(task)
-        }
+        },
+        deleteTask() {
+            this.tasks.splice(this.selectedTask, 1)
+        },
+        updateSelectedTask(index) {
+            this.selectedTask = index;
+        },
     }
 
 }
